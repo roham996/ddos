@@ -16,7 +16,7 @@ def create_conn(proxy):
 def change_ip(url):
     response = requests.get(url = 'https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=5000&country=DE')
     if response.status_code == 200:
-        print(response.text)
+        # print(response.text)
         # return False
         proxies = response.text.split('\n')
         random_proxy = random.choice(proxies)
